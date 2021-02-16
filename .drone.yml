@@ -5,7 +5,7 @@ name: default
 
 steps:
   - name: yamllint
-    image: yamllint
+    image: sdesbure/yamllint:latest
     commands:
       - yamllint .drone.yml
   - name: divisors
