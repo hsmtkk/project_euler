@@ -71,6 +71,13 @@ steps:
     commands:
       - cd mul35
       - go test
+  - name: powersum
+    image: golang:1.15
+    depends_on:
+      - yamllint
+    commands:
+      - cd powersum
+      - go test
   - name: prime
     image: golang:1.15
     depends_on:
