@@ -1,10 +1,11 @@
 package factorial_test
 
 import (
+	"math/big"
+	"testing"
+
 	"github.com/hsmtkk/project_euler/factorial"
 	"github.com/stretchr/testify/assert"
-	"testing"
-	"math/big"
 )
 
 func TestTen(t *testing.T) {
