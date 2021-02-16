@@ -8,6 +8,13 @@ steps:
     image: sdesbure/yamllint:latest
     commands:
       - yamllint .drone.yml
+  - name: amicable
+    image: golang:1.15
+    depends_on:
+      - yamllint
+    commands:
+      - cd amicable
+      - go test
   - name: collatz
     image: golang:1.15
     depends_on:
