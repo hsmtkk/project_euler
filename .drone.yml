@@ -99,6 +99,13 @@ steps:
     commands:
       - cd mul35
       - go test
+  - name: namescore
+    image: golang:1.15
+    depends_on:
+      - yamllint
+    commands:
+      - cd namescore
+      - go test
   - name: powersum
     image: golang:1.15
     depends_on:
