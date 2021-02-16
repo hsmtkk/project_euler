@@ -8,6 +8,13 @@ steps:
     image: sdesbure/yamllint:latest
     commands:
       - yamllint .drone.yml
+  - name: collatz
+    image: golang:1.15
+    depends_on:
+      - yamllint
+    commands:
+      - cd collatz
+      - go test
   - name: divisors
     image: golang:1.15
     depends_on:
@@ -49,6 +56,13 @@ steps:
       - yamllint
     commands:
       - cd largesum
+      - go test
+  - name: longestcollatz
+    image: golang:1.15
+    depends_on:
+      - yamllint
+    commands:
+      - cd longestcollatz
       - go test
   - name: mul35
     image: golang:1.15
