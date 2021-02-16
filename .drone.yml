@@ -106,6 +106,13 @@ steps:
     commands:
       - cd namescore
       - go test
+  - name: perfectnum
+    image: golang:1.15
+    depends_on:
+      - yamllint
+    commands:
+      - cd perfectnum
+      - go test
   - name: powersum
     image: golang:1.15
     depends_on:
