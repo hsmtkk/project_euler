@@ -1,0 +1,80 @@
+---
+kind: pipeline
+type: docker
+name: default
+
+steps:
+  - name: yamllint
+    image: yamllint
+    commands:
+      - yamllint .drone.yml
+  - name: divisors
+    image: golang:1.15
+    depends_on:
+      - yamllint
+    commands:
+      - cd divisors
+      - go test
+  - name: evenfib
+    image: golang:1.15
+    depends_on:
+      - yamllint
+    commands:
+      - cd evenfib
+      - go test
+  - name: fibonacci
+    image: golang:1.15
+    depends_on:
+      - yamllint
+    commands:
+      - cd fibonacci
+      - go test
+  - name: highdivtri
+    image: golang:1.15
+    depends_on:
+      - yamllint
+    commands:
+      - cd highdivtri
+      - go test
+  - name: largestprime
+    image: golang:1.15
+    depends_on:
+      - yamllint
+    commands:
+      - cd largestprime
+      - go test
+  - name: largesum
+    image: golang:1.15
+    depends_on:
+      - yamllint
+    commands:
+      - cd largesum
+      - go test
+  - name: mul35
+    image: golang:1.15
+    depends_on:
+      - yamllint
+    commands:
+      - cd mul35
+      - go test
+  - name: prime
+    image: golang:1.15
+    depends_on:
+      - yamllint
+    commands:
+      - cd prime
+      - go test
+  - name: sum
+    image: golang:1.15
+    depends_on:
+      - yamllint
+    commands:
+      - cd sum
+      - go test
+  - name: triangle
+    image: golang:1.15
+    depends_on:
+      - yamllint
+    commands:
+      - cd triangle
+      - go test
