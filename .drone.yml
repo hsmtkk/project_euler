@@ -15,6 +15,13 @@ steps:
     commands:
       - cd collatz
       - go test
+  - name: countsunday
+    image: golang:1.15
+    depends_on:
+      - yamllint
+    commands:
+      - cd countsunday
+      - go test
   - name: divisors
     image: golang:1.15
     depends_on:
@@ -28,6 +35,20 @@ steps:
       - yamllint
     commands:
       - cd evenfib
+      - go test
+  - name: factdigitsum
+    image: golang:1.15
+    depends_on:
+      - yamllint
+    commands:
+      - cd factdigitsum
+      - go test
+  - name: factorial
+    image: golang:1.15
+    depends_on:
+      - yamllint
+    commands:
+      - cd factorial
       - go test
   - name: fibonacci
     image: golang:1.15
