@@ -2,7 +2,7 @@ package evenfib
 
 import (
 	"github.com/hsmtkk/project_euler/fibonacci"
-	"github.com/hsmtkk/project_euler/util"
+	"github.com/hsmtkk/project_euler/sum"
 )
 
 func Answer() int {
@@ -17,5 +17,5 @@ func Answer() int {
 			ns = append(ns, f)
 		}
 	}
-	return util.Sum(ns)
+	return sum.Sum(ns)
 }
