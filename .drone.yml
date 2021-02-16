@@ -36,13 +36,13 @@ steps:
     commands:
       - cd fibonacci
       - go test
-  - name: highdivtri
-    image: golang:1.15
-    depends_on:
-      - yamllint
-    commands:
-      - cd highdivtri
-      - go test
+#  - name: highdivtri
+#    image: golang:1.15
+#    depends_on:
+#      - yamllint
+#    commands:
+#      - cd highdivtri
+#      - go test
   - name: largestprime
     image: golang:1.15
     depends_on:
