@@ -9,5 +9,6 @@ import (
 )
 
 func TestTen(t *testing.T) {
-	assert.Equal(t, big.NewInt(int64(3628800)), factorial.Factorial(10))
+	calculator := factorial.New()
+	assert.Equal(t, big.NewInt(int64(3628800)), calculator.Factorial(10))
 }

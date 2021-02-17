@@ -29,6 +29,20 @@ steps:
     commands:
       - cd countsunday
       - go test
+  - name: digit
+    image: golang:1.16
+    depends_on:
+      - yamllint
+    commands:
+      - cd digit
+      - go test
+  - name: digitfactorial
+    image: golang:1.16
+    depends_on:
+      - yamllint
+    commands:
+      - cd digitfactorial
+      - go test
   - name: digitfifthpow
     image: golang:1.16
     depends_on:
