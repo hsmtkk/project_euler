@@ -9,154 +9,154 @@ steps:
     commands:
       - yamllint .drone.yml
   - name: amicable
-    image: golang:1.15
+    image: golang:1.16
     depends_on:
       - yamllint
     commands:
       - cd amicable
       - go test
   - name: collatz
-    image: golang:1.15
+    image: golang:1.16
     depends_on:
       - yamllint
     commands:
       - cd collatz
       - go test
   - name: countsunday
-    image: golang:1.15
+    image: golang:1.16
     depends_on:
       - yamllint
     commands:
       - cd countsunday
       - go test
   - name: digitfifthpow
-    image: golang:1.15
+    image: golang:1.16
     depends_on:
       - yamllint
     commands:
       - cd digitfifthpow
       - go test
   - name: divisors
-    image: golang:1.15
+    image: golang:1.16
     depends_on:
       - yamllint
     commands:
       - cd divisors
       - go test
   - name: evenfib
-    image: golang:1.15
+    image: golang:1.16
     depends_on:
       - yamllint
     commands:
       - cd evenfib
       - go test
   - name: factdigitsum
-    image: golang:1.15
+    image: golang:1.16
     depends_on:
       - yamllint
     commands:
       - cd factdigitsum
       - go test
   - name: factorial
-    image: golang:1.15
+    image: golang:1.16
     depends_on:
       - yamllint
     commands:
       - cd factorial
       - go test
   - name: fibonacci
-    image: golang:1.15
+    image: golang:1.16
     depends_on:
       - yamllint
     commands:
       - cd fibonacci
       - go test
 #  - name: highdivtri
-#    image: golang:1.15
+#    image: golang:1.16
 #    depends_on:
 #      - yamllint
 #    commands:
 #      - cd highdivtri
 #      - go test
   - name: largestprime
-    image: golang:1.15
+    image: golang:1.16
     depends_on:
       - yamllint
     commands:
       - cd largestprime
       - go test
   - name: largesum
-    image: golang:1.15
+    image: golang:1.16
     depends_on:
       - yamllint
     commands:
       - cd largesum
       - go test
   - name: lexperm
-    image: golang:1.15
+    image: golang:1.16
     depends_on:
       - yamllint
     commands:
       - cd lexperm
       - go test
   - name: longestcollatz
-    image: golang:1.15
+    image: golang:1.16
     depends_on:
       - yamllint
     commands:
       - cd longestcollatz
       - go test
   - name: mul35
-    image: golang:1.15
+    image: golang:1.16
     depends_on:
       - yamllint
     commands:
       - cd mul35
       - go test
   - name: namescore
-    image: golang:1.15
+    image: golang:1.16
     depends_on:
       - yamllint
     commands:
       - cd namescore
       - go test
   - name: perfectnum
-    image: golang:1.15
+    image: golang:1.16
     depends_on:
       - yamllint
     commands:
       - cd perfectnum
       - go test
   - name: powersum
-    image: golang:1.15
+    image: golang:1.16
     depends_on:
       - yamllint
     commands:
       - cd powersum
       - go test
   - name: prime
-    image: golang:1.15
+    image: golang:1.16
     depends_on:
       - yamllint
     commands:
       - cd prime
       - go test
   - name: sum
-    image: golang:1.15
+    image: golang:1.16
     depends_on:
       - yamllint
     commands:
       - cd sum
       - go test
   - name: thousandfibonacci
-    image: golang:1.15
+    image: golang:1.16
     depends_on:
       - yamllint
     commands:
       - cd thousandfibonacci
       - go test
   - name: triangle
-    image: golang:1.15
+    image: golang:1.16
     depends_on:
       - yamllint
     commands:
