@@ -148,13 +148,13 @@ steps:
     commands:
       - cd sum
       - go test
-  - name: thousandfibonacci
-    image: golang:1.16
-    depends_on:
-      - yamllint
-    commands:
-      - cd thousandfibonacci
-      - go test
+  # - name: thousandfibonacci
+  #   image: golang:1.16
+  #   depends_on:
+  #     - yamllint
+  #   commands:
+  #     - cd thousandfibonacci
+  #     - go test
   - name: triangle
     image: golang:1.16
     depends_on:
