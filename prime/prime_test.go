@@ -18,3 +18,10 @@ func TestOne(t *testing.T) {
 	got := prime.Primes(16)
 	assert.Equal(t, want, got)
 }
+
+func TestIsPrime(t *testing.T) {
+	assert.False(t, prime.IsPrime(996))
+	assert.True(t, prime.IsPrime(997))
+	assert.False(t, prime.IsPrime(998))
+	assert.False(t, prime.IsPrime(999))
+}

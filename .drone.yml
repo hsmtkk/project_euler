@@ -15,6 +15,13 @@ steps:
     commands:
       - cd amicable
       - go test
+  - name: circularprime
+    image: golang:1.16
+    depends_on:
+      - yamllint
+    commands:
+      - cd circularprime
+      - go test
   - name: collatz
     image: golang:1.16
     depends_on:
@@ -49,6 +56,13 @@ steps:
       - yamllint
     commands:
       - cd digitfifthpow
+      - go test
+  - name: digitrotate
+    image: golang:1.16
+    depends_on:
+      - yamllint
+    commands:
+      - cd digitrotate
       - go test
   - name: divisors
     image: golang:1.16

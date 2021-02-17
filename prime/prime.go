@@ -17,3 +17,14 @@ func Primes(n int) []int {
 	}
 	return ps
 }
+
+func IsPrime(n int64) bool {
+	var i int64
+	sq := int64(math.Sqrt(float64(n)))
+	for i = 2; i <= sq; i++ {
+		if n%i == 0 {
+			return false
+		}
+	}
+	return true
+}
