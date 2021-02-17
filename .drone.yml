@@ -29,6 +29,13 @@ steps:
     commands:
       - cd countsunday
       - go test
+  - name: digitfifthpow
+    image: golang:1.15
+    depends_on:
+      - yamllint
+    commands:
+      - cd digitfifthpow
+      - go test
   - name: divisors
     image: golang:1.15
     depends_on:
